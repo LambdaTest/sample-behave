@@ -4,15 +4,10 @@ import json
 
 TASK_ID = int(os.environ['TASK_ID']) if 'TASK_ID' in os.environ else 0
 if os.environ["env"] == "jenkins":
-    json_file = "config/jenkins.json"
     desired_cap_dict = os.environ["LT_BROWSERS"]
-    with open('config/jenkins.json', 'w') as outfile:
-        json.dump(desired_cap_dict, outfile)
-    with open(json_file) as data_file:
-        CONFIG = json.load(data_file)
-    CONFIG = json.loads(CONFIG)
+    CONFIG = json.loads(desired_cap_dict)
 else:
-    json_file = "config/local.json"
+    json_file = "config/config.json"
     with open(json_file) as data_file:
         CONFIG = json.load(data_file)
 
