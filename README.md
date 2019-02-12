@@ -3,7 +3,7 @@
 
 # python-behave-todo
 behave integration with LambdaTest<br/>
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
 
 ### Setup
 Install depedencies ```pip install -r requirements.txt```
@@ -17,7 +17,7 @@ example:
         "access_key":"Your Access Key"
      }
 ```
--For setting capaibilies,Update `local.json`  (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
+-For setting capaibilies,Update `config.json`  (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
  example:
 ```
    [
@@ -43,7 +43,7 @@ Please refer this [url](https://www.lambdatest.com/support/docs/display/TD/Selen
 ### Run tests
 ##### through local
 ```bash
-paver run local
+paver run 
 ```
 
 ##### through jenkins
@@ -51,6 +51,3 @@ paver run local
 paver run jenkins
 ```
 
-License
-====
-Open sourced under [MIT License](LICENSE)

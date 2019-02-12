@@ -2,7 +2,7 @@ from selenium import webdriver
 import os
 import json
 
-TASK_ID = int(os.environ['TASK_ID']) if 'TASK_ID' in os.environ else 0
+INDEX = int(os.environ['INDEX']) if 'INDEX' in os.environ else 0
 if os.environ["env"] == "jenkins":
     desired_cap_dict = os.environ["LT_BROWSERS"]
     CONFIG = json.loads(desired_cap_dict)
@@ -19,7 +19,7 @@ authkey = os.environ["LT_ACCESS_KEY"] if "LT_ACCESS_KEY" in os.environ else USER
 
 
 def before_feature(context, feature):
-    desired_cap = setup_desired_cap(CONFIG[TASK_ID])
+    desired_cap = setup_desired_cap(CONFIG[INDEX])
     context.browser = webdriver.Remote(
         desired_capabilities=desired_cap,
         command_executor="https://%s:%s@hub.lambdatest.com:443/wd/hub" % (username, authkey)
@@ -31,6 +31,11 @@ def after_feature(context, feature):
 
 
 def setup_desired_cap(desired_cap):
+    """
+    sets the capability according to LT
+    :param desired_cap:
+    :return:
+    """
     if os.environ['env'] == 'jenkins':
         desired_cap["platform"] = desired_cap["operatingSystem"]
         del desired_cap["operatingSystem"]

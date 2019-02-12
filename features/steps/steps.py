@@ -1,3 +1,6 @@
+"""
+Selenium steps to configure behave test scenarios
+"""
 import time
 
 
