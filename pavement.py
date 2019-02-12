@@ -51,7 +51,8 @@ def get_pool_size():
     :return:
     """
     if "LT_BROWSERS" in os.environ:
-        pool = len(os.environ["LT_BROWSERS"])
+        CONFIG = json.loads(os.environ["LT_BROWSERS"])
+        pool = len(CONFIG)
     else:
         json_file = "config/config.json"
         with open(json_file) as data_file:
