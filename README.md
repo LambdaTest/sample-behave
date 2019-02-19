@@ -2,22 +2,28 @@
 ---
 
 # python-behave-todo
-behave integration with LambdaTest<br/>
+Behave integration with LambdaTest<br/>
 
 
 ### Setup
 Install depedencies ```pip install -r requirements.txt```
 ### Configuration steps
 ##### Setting locally
-- Update `user.json` with your LambdaTest username and access key. It can be obtained from [LambdaTest dashbaord](https://automation.lambdatest.com/)
+- Set LambdaTest username and access key in environment variables. It can be obtained from [LambdaTest dashboard](https://automation.lambdatest.com/)
 example:
+- For linux/mac
 ```
-     {
-        "username":"Your Username",
-        "access_key":"Your Access Key"
-     }
+   export LT_USERNAME="YOUR_USERNAME"
+   export LT_ACCESS_KEY="YOUR ACCESS KEY"
+  
 ```
--For setting capaibilies,Update `config.json`  (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
+- For Windows
+```
+   set LT_USERNAME="YOUR_USERNAME"
+   set LT_ACCESS_KEY="YOUR ACCESS KEY"
+  
+```
+- For setting capaibilies,Update `config.json`  (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
  example:
 ```
    [
@@ -41,12 +47,12 @@ Please refer this [url](https://www.lambdatest.com/support/docs/display/TD/Selen
 >    - [Linux](https://www.lambdatest.com/support/docs/display/TD/Local+Testing+For+Linux)
 
 ### Run tests
-##### through local
+##### runnnig through local
 ```bash
 paver run 
 ```
 
-##### through jenkins
+#####running through jenkins
 ```bash
 paver run jenkins
 ```

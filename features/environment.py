@@ -14,8 +14,8 @@ else:
 with open("config/user.json") as data_file:
     USER_CONFIG = json.load(data_file)
 
-username = os.environ["LT_USERNAME"] if "LT_USERNAME" in os.environ else USER_CONFIG["username"]
-authkey = os.environ["LT_ACCESS_KEY"] if "LT_ACCESS_KEY" in os.environ else USER_CONFIG["access_key"]
+username = os.environ["LT_USERNAME"]
+authkey = os.environ["LT_ACCESS_KEY"]
 
 
 def before_feature(context, feature):
