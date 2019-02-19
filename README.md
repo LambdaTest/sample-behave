@@ -23,7 +23,7 @@ example:
    set LT_ACCESS_KEY="YOUR ACCESS KEY"
   
 ```
-- For setting capaibilies,Update `config.json`  (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
+ For setting capaibilies,Update `config.json`  (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
  example:
 ```
    [
@@ -47,12 +47,12 @@ Please refer this [url](https://www.lambdatest.com/support/docs/display/TD/Selen
 >    - [Linux](https://www.lambdatest.com/support/docs/display/TD/Local+Testing+For+Linux)
 
 ### Run tests
-##### runnnig through local
+##### running tests through local
 ```bash
 paver run 
 ```
 
-#####running through jenkins
+#####running tests through jenkins
 ```bash
 paver run jenkins
 ```
