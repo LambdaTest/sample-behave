@@ -52,7 +52,7 @@ Please refer this [url](https://www.lambdatest.com/support/docs/display/TD/Selen
 paver run 
 ```
 
-#####running tests through jenkins
+##### running tests through jenkins
 ```bash
 paver run jenkins
 ```
