@@ -43,6 +43,7 @@ def setup_desired_cap(desired_cap):
         #sets the tunnel name if configured
         if "LT_TUNNEL_NAME" in os.environ:
             desired_cap["TunnelName"] = os.environ["LT_TUNNEL_NAME"]
+            desired_cap["tunnel"] = "true"
     if "tunnel" in desired_cap:
         if desired_cap["tunnel"].lower() == "true":
             desired_cap["tunnel"] = True
