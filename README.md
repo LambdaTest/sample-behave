@@ -26,11 +26,22 @@ example:
  For setting capaibilies,Update `config.json`  (List of supported OS platfrom, Browser, resolutions can be found at [LambdaTest capability generator](https://www.lambdatest.com/capabilities-generator/))
  example:
 ```
+```
+ Setting capabilties for parallel execution
+```
    [
      {
         "platform": "win10",
         "browserName": "chrome",
         "version": "67.0",
+        "resolution": "1024x768",
+        "name": "this is the behave test",
+        "build": "behave-test-lambdatest"
+     },
+     {
+        "platform": "win7",
+        "browserName": "firefox",
+        "version": "61.0",
         "resolution": "1024x768",
         "name": "this is the behave test",
         "build": "behave-test-lambdatest"
