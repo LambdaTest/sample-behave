@@ -6,6 +6,7 @@ import time
 
 @when('visit url "{url}"')
 def step(context, url):
+    context.browser.maximize_window()
     context.browser.get(url)
 
 
